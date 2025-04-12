@@ -1,0 +1,196 @@
+\chapter{System Study and Requirements Engineering}
+\label{SystemStudyandRequirementsEngineering}
+System Study and Requirements Engineering are crucial phases in the software development lifecycle, playing a pivotal role in ensuring the successful delivery of a software project. System Study involves a comprehensive analysis of the existing system, understanding its functionalities, identifying shortcomings, and determining the requirements for a new or improved system.This phase lays the foundation for Requirements Engineering, which focuses on eliciting, documenting, validating, and managing the functional and non-functional requirements of the software system.
+\section{Existing System}
+For the FastTrack project, there are existing systems and software solutions with similar functionalities.
+In the context of package assignment, various logistics platforms optimizes deliveries by considering location clustering, personnel availability, deadlines, and real-time traffic to ensure efficient distribution. Algorithms dynamically allocate packages to minimize delays and maximize resource utilization.
+In the context of route optimization, various logistics and delivery platforms help businesses optimize multiple routes by minimizing travel time and fuel costs. These applications leverage algorithmic methods to determine efficient routes dynamically based on real-time data.
+\\
+A literature review is a critical and comprehensive analysis of existing research studies and methodologies related to package assignment and route optimization. It helps in understanding different algorithmic approaches and their efficiency in solving real-world routing problems.
+Following are some of the research papers and existing system related to package assignment and route optimization:
+\begin{itemize}
+    \item Greedy Algorithm for Multi-Route Optimization: This study explores how the Greedy Algorithm is applied in route optimization, making decisions based on local optimization at each step to reduce total travel distance and time. Although it does not guarantee a globally optimal solution, it provides an efficient and scalable approach for large-scale delivery operations. [1]
+    \item Bin Packing Algorithms in Logistics: This research explores the application of Bin Packing Algorithms to package assignment problems. By modeling delivery vehicles as bins with limited capacity, packages are assigned in a way that maximizes space utilization and minimizes the number of vehicles required. Simple heuristics like the First-Fit and Best-Fit algorithms provide efficient and scalable solutions, though they may not always achieve optimal results. [2]
+    \item Amazon Logistics: 
+    It optimizes package assignment using AI-driven algorithms that consider location, driver availability, and real-time traffic to ensure fast and efficient deliveries. Its Amazon Routing Engine (ARE) dynamically calculates optimal routes, reducing delays and operational costs. [3]
+    \item Google Maps API: 
+    It provides route planning and optimization capabilities. It allows users to generate the shortest and fastest routes using real-time traffic data and alternative route suggestions. Businesses integrate it into their logistics systems to improve route planning accuracy. [4]
+\end{itemize}
+\section{Gap Analysis}
+\begin{enumerate}
+    \item Package Assignment Optimization: The current system assigns packages based on predefined criteria, but it could benefit from advanced optimization techniques, such as AI-driven predictive analytics or dynamic reassignment based on real-time factors like traffic and personnel availability.
+    \item Employee Routing Efficiency: The navigation system calculates optimal routes, but incorporating adaptive route optimization based on live traffic data and delivery priorities could further reduce travel time and fuel costs.
+\end{enumerate}
+\section{Proposed System}
+The Fasttrack is an advanced web and mobile-based platform designed to streamline package assignment and delivery personnel management. The system offers several advantages, including:
+\begin{itemize}
+    \item Smart Package Assignment: Automates package distribution using location data and employee availability.
+    \item Minimized Travel Distance \& Efficient Delivery Sequencing: The system optimizes delivery routes by assigning packages based on proximity and logical sequencing, ensuring shorter travel distances and smoother delivery flows.
+\end{itemize}
+Despite its advantages, the system also has some limitations:
+\begin{itemize}
+    \item Performance: Managing large-scale package assignments efficiently may require cloud-based computing and optimization techniques.
+    \item Scalability: The system should support integration with third-party logistics APIs for future expansion.
+    \item Security \& Data Privacy: Ensuring secure access and compliance with data protection regulations.
+\end{itemize}
+\subsection{Problem Statement}
+Efficient package delivery is a critical challenge for logistics companies, requiring optimal route planning, real-time tracking, and seamless coordination between businesses and delivery personnel. Traditional package assignment methods can be inefficient, leading to delays, mismanagement, and increased operational costs. In this project, we aim to streamline this process by developing a website and mobile app that enables companies to efficiently assign deliveries, track employees in real time and optimize routes using efficient algorithms. The system will provide businesses with a user-friendly website for package management and employee assignment while equipping delivery personnel with a mobile app for navigation, status updates and push notifications.
+\subsection{System Model}
+The FastTrack follows a client-server architecture with a web and mobile interface. Here’s an overview:
+\begin{itemize}
+    \item Client-Side: It consists of website and mobile app. The website is built with HTML, CSS, and JavaScript, allows companies to log in, manage employees, upload package details and assign deliveries. An admin panel is available for verification and management tasks. The mobile app, developed in Flutter, enables delivery personnel to log in, view assigned packages, navigate routes and receive real-time push notifications.
+    \item Server-Side: It is powered by Flask and Firebase Firestore, manages authentication, stores package and employee data and processes delivery assignments. Supabase is used for storing employee profile images. A built-in assignment algorithm optimizes delivery routes and assigns employees efficiently. The system integrates Google Maps API for live tracking and navigation.
+\end{itemize}
+\section{Requirements Engineering}
+The process of gathering software requirements from clients and then analysing and documenting them is known as requirements engineering. The goal of requirement engineering is to develop and maintain a sophisticated and descriptive ‘System Requirements Specification’ document. It essentially involves the following five activities:
+\begin{enumerate}
+    \item Feasibility Study
+    \item Requirements Elicitation
+    \item Requirements Analysis
+    \item Requirements Specification
+    \item Requirements Validation
+\end{enumerate}
+\subsection{Feasibility Study}
+Feasibility study is a procedure that identifies, describes and evaluates the proposed
+systems and selects the best system for the task under consideration. An estimate is made
+of whether the identified user needs may be satisfied using current software and hardware
+technologies. The study will decide if the proposed system will be cost-effective from a
+business point of view and if it can develop given existing budgetary constraints. The key
+considerations involved in the feasibility analysis are: 
+\begin{itemize}
+    \item Economic Feasibility
+    \item Technical Feasibility
+    \item Behavioral Feasibility
+\end{itemize}
+\subsubsection{Economic Feasibility}
+It is more commonly known as \textit{Cost / Benefit analysis}.
+Economic feasibility refers to the evaluation of whether a proposed project or investment is financially viable and justifiable. It involves assessing the potential costs and benefits associated with the project to determine whether the expected returns outweigh the investment required. Economic
+feasibility analysis helps stakeholders make informed decisions about whether to proceed with a project based on its financial merits.\\
+The development includes server hosting, Firebase integration and Google Maps API usage. The benefits include improved efficiency, optimized delivery routes, reduced delays and lower operational costs. By automating package assignment and tracking, FastTrack helps businesses save time and resources, making it a financially viable solution.
+\subsubsection{Technical Feasibility}
+Technical feasibility refers to the assessment of whether a proposed project can be successfully implemented from a technical standpoint. It involves evaluating whether the necessary technology, resources, and expertise are available or can be acquired to develop and deploy the project effectively. Technical feasibility analysis helps determine whether the project’s goals and requirements can be achieved using existing or readily
+available technology and resources. \\
+The system is built using HTML, CSS and JavaScript for the website and Flutter for the mobile app, ensuring cross-platform compatibility. The backend is powered by Flask (Python) and Firebase Firestore, which provide scalable data storage and real-time synchronization. Key technologies such as Google Maps API enable route generation and live tracking, while Firebase Authentication ensures secure access for companies and employees. Supabase is used for storing profile and company data. Since all components are widely supported and well-integrated, the system is technically feasible and can be successfully implemented.
+\subsubsection{Behavioral Feasibility}
+This is also known as \textit{Operational Feasibility}. Behavioral feasibility refers to the assessment of whether a proposed project is acceptable and practical from the perspective of the
+people who will be affected by it. \\
+Companies benefit from package and employee assignment thereby reducing manual work. Delivery personnel receive clear navigation routes and instant updates via push notifications, improving workflow. Admins can monitor system activities seamlessly. Since the system enhances efficiency and minimizes operational challenges, user acceptance is expected to be high, ensuring smooth adoption and long-term usability.
+\subsection{Requirements Elicitation}
+Requirement elicitation is the process of gathering, identifying and documenting requirements for a software system or project. It involves interacting with stakeholders such as clients, end-users and subject matter experts, to understand their needs,
+preferences and expectations regarding the system’s functionality, features and
+performance.\\
+The identified key requirements are:
+\begin{itemize}
+    \item User Authentication: Secure login for companies, employees and admins.
+    \item Package Management: Companies upload package details and assign deliveries.
+    \item Route Optimization: Delivery personnel take the efficient paths, reducing travel time, fuel costs and delays.
+    \item Admin Panel: Monitoring and verification features for managing company registrations and system activities.
+\end{itemize}
+\subsection{Requirement Analysis}
+The requirement analysis involves identifying and documenting the needs and expectations of stakeholders. The primary stakeholders of the system are companies, delivery personnel and administrators.
+This involves identifying functional and
+non-functional requirements for the system.
+\subsubsection{Functional Requirements}
+\begin{itemize}
+    \item Authentication: Companies, employees and admins must log in securely
+    \item Registration: Registration for both companies and employee
+    \item Package Assignment: System assigns packages to employees based on location, availability and efficient routes. Employees can update the package status.
+    \item Employee Management: Companies can add, update or remove employees. Employees receive assigned package details in their mobile app.
+    \item Route Optimization: System calculates the efficient delivery route.
+    \item Admin Panel: Admins can verify company registrations and manage system operations.
+\end{itemize}
+\subsubsection{Non-Functional Requirements}
+\begin{itemize}
+    \item Performance: System should respond to user interactions within 4 seconds. The package assignment must be done within few seconds after receiving package details, even for a high volume of packages. System should generate efficient route within few seconds after packages are assigned to employees.
+    \item Data Integrity \& Consistency: All package assignments, tracking data and employee records must be accurate and synchronized across all users.
+    \item Compliance \& Legal Considerations: The system must comply with data protection laws.
+\end{itemize}
+\subsection{Requirements Specification}
+When a requirements specification is written, it is important to remember that the main goal is to deliver the best product possible, and not to produce a perfect requirements specification. There are many good definitions that describe how a requirements
+specification should be written, but all have at least one part in common, which is the essence of requirements specification, namely the requirements. Requirements are divided into \textit{functional requirement} and \textit{non-functional requirements}. Functional requirements
+describe the functionality of the desired system that usually consists of some kind of calculation and results, given specific inputs. Non-functional requirements describe how quickly these calculations should be and how quickly the system will respond when its functionality is used. The SRS document is given below:
+\subsubsection{Functional Requirements}
+\begin{itemize}
+    \item User Authentication \& Access Control: The system shall allow companies, employees and admins to register and log in securely. The system shall provide password reset and account recovery options.
+    \item Package Assignment: The system shall assign packages to employees based on availability and location. It should update package status dynamically.
+    \item Route Optimization: The system shall calculate the efficient delivery route using Google Maps API and Greedy Algorithm.
+    \item Admin Panel: The system shall allow admins to verify new company registrations before granting access.
+    \item  Data Storage \& Retrieval: The system shall store package details and employee records in Firebase Firestore.
+\end{itemize}
+\subsubsection{Non-Functional Requirements}
+\begin{itemize}
+    \item Performance: The system shall respond to user interactions within 4 seconds of input.
+    It should render smoothly without lagging or freezing. The system shall assign packages to employees and generates efficient route within few seconds.
+    \item Maintainability: The system shall be developed using modular and well-documented
+    code that is easy to understand, modify, and maintain by future developers.
+    \item Data Integrity: The system shall ensure that all package and employee records are synchronized across the website and mobile app in real time.
+\end{itemize}
+\subsection{Requirements Validation}
+Requirement validation is the process of ensuring that the documented requirements accurately and completely represent the needs and expectations of the stakeholders and are feasible for implementation. It involves reviewing, verifying, and validating the requirements to confirm that they meet the intended purpose and will result in a satisfactory solution.
+ \begin{itemize}
+     \item  Reviewing Requirements Documentation: Review the documented functional and
+     non-functional requirements, use cases and user stories for the website and mobile app.
+     \item Verification and Validation: Verify the requirements against predefined acceptance criteria to confirm their correctness and completeness. Validate the requirements with stakeholders to ensure that they accurately represent their needs and expectations.
+ \end{itemize}
+
+% System Study and Requirements Engineering are critical phases in the software development lifecycle. This chapter lays the groundwork for understanding the existing system, identifying gaps and defining the requirements for the new system.
+% \begin{itemize}
+%     \item Existing System
+%     \begin{itemize}
+%         \item Amazon Logistics, which uses AI-driven algorithms for package assignment and optimal route planning.
+%         \item Google Maps API, which provides route optimization using real-time traffic data.
+%         \item Literature Review highlights Greedy Algorithm for multi-route optimization and Bin Packing Algorithms for efficient package assignments.
+%     \end{itemize}
+%     \item Gap Analysis
+%     \begin{itemize}
+%         \item Package Assignment Optimization: Enhancing dynamic reassignment using real-time traffic and personnel availability.
+%         \item Employee Routing Efficiency: Implementing adaptive route optimization based on live traffic and delivery priorities.
+%     \end{itemize}
+%     \item Proposed System
+%     \begin{itemize}
+%         \item Smart Package Assignment based on location and employee availability.
+%         \item Optimized Delivery Sequencing, reducing travel distance and delays.
+%     \end{itemize}
+%     \item Problem Statement: The project aims to streamline delivery operations by integrating package assignment and optimized routing through a website for businesses and a mobile app for employees.
+%     \item System Model: FastTrack follows a client-server architecture
+%     \begin{itemize}
+%         \item A web interface (HTML, CSS, JavaScript) for businesses to manage employees and package assignments.
+%         \item A mobile app (Flutter) for delivery personnel to track routes and receive push notifications.
+%         \item A Flask and Firebase Firestore backend for data storage, authentication and route optimization using Google Maps API.
+%     \end{itemize}
+%     \item Requirements Engineering
+%     \begin{itemize}
+%         \item Feasibility
+%         \begin{itemize}
+%             \item  Economic Feasibility: Cost-benefit analysis of hosting, Firebase integration, and operational efficiency.
+%             \item Technical Feasibility: Ensuring compatibility with existing technologies like Firebase, Google Maps API and Flutter.
+%             \item  Behavioral Feasibility: Assessing user acceptance for businesses, employees and administrators.
+%         \end{itemize}
+%         \item Requirements Elicitation
+%         \begin{itemize}
+%             \item User Authentication for secure access.
+%             \item Package Management for uploading and assigning deliveries.
+%             \item Route Optimization for efficient navigation.
+%             \item Admin Panel for monitoring and verification.
+%         \end{itemize}
+%         \item Requirements Analysis: Defines functional requirements (package assignment, employee management, admin panel) and non-functional requirements (performance, data integrity, compliance).
+%         \item Requirements Specification: The System Requirements Specification (SRS) document formalizes the system’s functional and non-functional requirements, ensuring clarity and feasibility.
+%         \item Requirements Validation: Requirements undergo review, verification and validation with stakeholders to confirm their accuracy and completeness.
+%     \end{itemize}
+% \end{itemize}
+% This chapter establishes the existing system’s limitations, proposes improvements and defines the functional and technical specifications necessary for development. This foundation ensures that the system meets stakeholder needs while being technically feasible and scalable.
+\section{Summary}
+Chapter 2 explores the existing system, gaps and proposed improvements for FastTrack. It
+reviews Amazon Logistics’ AI-driven package assignment and Google Maps API’s real-time
+route optimization, alongside literature on Greedy and Bin Packing algorithms. A gap
+analysis identifies the need for dynamic package reassignment and adaptive routing based on
+live traffic and personnel availability. The proposed system introduces package assignments
+and optimized delivery sequencing to enhance efficiency.
+FastTrack follows a client-server architecture, with a web interface for businesses, a mobile
+app for employees and a Flask-Firebase backend for data management and route optimization.
+The requirements engineering process evaluates economic, technical and behavioral feasibility
+to ensure smooth integration. Requirements are elicited, analyzed, specified and validated to
+define system functionalities such as authentication, package management, route optimization
+and an admin panel. A System Requirements Specification (SRS) document formalizes
+both functional and non-functional needs. Finally, all requirements undergo verification and
+validation to ensure accuracy, feasibility, and stakeholder alignment.

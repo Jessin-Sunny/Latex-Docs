@@ -1,0 +1,90 @@
+\chapter{Testing}
+\label{Testing}
+Software Testing is a method to check whether the actual software product matches
+expected requirements and to ensure that the software product is Defect free. It involves
+the execution of software/system components using manual or automated tools to evaluate
+one or more properties of interest. The purpose of software testing is to identify errors,
+gaps or missing requirements in contrast to actual requirements.
+\section{Testing Strategies Used}
+ In this section, the strategies that were employed to test our project will be discussed. The
+ following list outlines the testing strategies that were utilized in our project to ensure its
+ quality and effectiveness
+ \subsection{Unit Testing}
+Unit testing is a software testing technique where individual units or components of a
+software application are tested in isolation to ensure they function correctly. It is a critical
+practice in software development aimed at verifying the behavior of small, self-contained
+units of code, such as functions, methods or classes. Through systematic testing of individual units of code, developers can identify and address bugs early in the development cycle, maintain code
+quality and reliability, facilitate code refactoring, enhance code base understanding and
+prevent unintended changes in behavior due to modifications. For this project, unit testing ensures that individual components, such as login, package assignment and navigation, work correctly.
+The following are the main
+two techniques to perform unit testing:
+\subsubsection{Black Box Testing}
+Black Box testing is a software testing technique where the internal workings or
+implementation details of the system being tested are not known to the tester. This approach focuses solely on the external behavior of the software without
+considering its internal logic, code structure or design. Black Box Testing for FastTrack verifies functional behavior by testing login, package assignment, employee management, route optimization and real-time updates without analyzing internal code. It ensures correct system responses, secure authentication, accurate data processing and seamless navigation while handling errors and edge cases effectively.
+\subsubsection{White Box Testing}
+White Box testing, also known as structural or glass-box testing, involves examining the
+internal structure and logic of the software system. This type of
+testing requires access to the source code, allowing testers to design test cases based on the
+understanding of how the code is structured and how it operates. White Box Testing for FastTrack focuses on internal code structure, ensuring efficient algorithms, secure authentication and optimized database queries. It verifies logic flow, code coverage and performance, ensuring reliability and scalability in package assignment, employee management and route optimization.
+\subsection{Integration testing}
+Integration testing is a software testing technique that focuses on verifying the interactions
+between different modules or components of a software system after they have been
+integrated. It aims to identify defects or inconsistencies that may arise when multiple
+modules are combined to form the complete system. Integration testing is typically
+performed following unit testing and precedes system testing in the software development
+life-cycle. It ensures that individual modules or components, which may have been tested
+independently during unit testing, interact correctly when integrated into the larger
+system. Integration Testing for FastTrack ensures seamless interaction between system modules, including the web platform, mobile app, Firebase backend and Google Maps API. It verifies data flow, authentication, package assignment and real-time updates, ensuring smooth communication and functionality across all components.
+\section{Testing Results}
+Tests were conducted using the strategies mentioned earlier. The results obtained from
+these tests are as follows:
+\subsection{Results of Black Box Testing}
+In this project, Black Box testing, verified core functionalities without inspecting internal code. Login and authentication were tested to ensure secure access for companies and employees. Package assignment and employee management were validated for correct data processing and UI interactions. Route optimization was tested to confirm accurate navigation and real-time updates. Error handling was assessed by inputting invalid data and checking system responses. System performance was evaluated under varying loads to ensure smooth operation. The results confirmed that FastTrack functions correctly, with all key features performing as expected. 
+\subsection{ Results of White Box Testing}
+In this project, White Box testing, focused on evaluating internal logic, code structure, and flow control. Authentication modules were tested for secure session handling and proper token validation. The package assignment algorithm was analyzed to ensure correct employee selection and data integrity. Route optimization logic was examined for efficiency, ensuring minimal travel distance calculations. Code coverage tests were performed to verify all critical functions were executed under different conditions. Error handling mechanisms were assessed to ensure smooth exception management without system crashes. The results confirmed optimized code execution, proper data flow and robust security measures.
+\subsection{Results of Integration Testing}
+In this project, Integration testing, validated seamless communication between different system modules. The authentication module was tested with Firebase to ensure secure login and session management. The package assignment system was integrated with Firestore, verifying real-time updates and correct employee assignments. Google Maps API integration was checked for accurate route optimization and location tracking. The mobile app and web portal were tested together to ensure synchronized data flow between companies and delivery personnel. API endpoints were validated for smooth data exchange between the frontend (Flutter, JavaScript) and backend (Flask, Firebase). The results confirmed that all modules work cohesively, ensuring a reliable and efficient delivery management system.
+\section{Test Cases}
+\small
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\begin{longtable}{|c|p{2cm}|p{4cm}|p{2cm}|p{2cm}|c|}
+\hline
+\textbf{Test Case ID} & \textbf{Test Scenario} & \textbf{Test Steps} & \textbf{Expected Output} & \textbf{Actual Output} & \textbf{Status} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Test Case ID} & \textbf{Test Scenario} & \textbf{Test Steps} & \textbf{Expected Output} & \textbf{Actual Output} & \textbf{Status} \\
+\hline
+\endhead
+TC01 & Upload Package Details & Log in as Company $\rightarrow$ Navigate to Package Upload $\rightarrow$ Upload Excel file & Packages uploaded successfully & Packages uploaded successfully & Pass \\
+\hline
+TC02 & Assign Employees & Log in as Company $\rightarrow$ Navigate to Employee Assignment $\rightarrow$ Select available employees $\rightarrow$ Assign packages & Employees assigned based on workload & Assignments updated incorrectly & Fail \\
+\hline
+TC03 & Assign Employees & Log in as Company $\rightarrow$ Navigate to Employee Assignment $\rightarrow$ Select available employees $\rightarrow$ Assign packages & Employees assigned based on workload & Assignments updated correctly & Pass \\
+\hline
+TC04 & Real-Time Package Updates & Log in as Company $\rightarrow$ Navigate to Package Assignment $\rightarrow$ Monitor package status & Package statuses updated in real-time & Statuses updated correctly & Pass \\
+\hline
+TC05 & Route Calculation & Log in as Employee $\rightarrow$ Navigate to Assigned Deliveries $\rightarrow$ View optimized route & Route calculated based on shortest time and distance & Route displayed correctly & Pass \\
+\hline
+TC06 & Real-Time ETA Update & Log in as Employee $\rightarrow$ Start navigation $\rightarrow$ Monitor ETA changes based on real-time traffic & ETA updates dynamically as conditions change & ETA updated incorrectly & Fail \\
+\hline
+TC07 & Real-Time ETA Update & Log in as Employee $\rightarrow$ Start navigation $\rightarrow$ Monitor ETA changes based on real-time traffic & ETA updates dynamically as conditions change & ETA updated correctly & Pass \\
+\hline
+TC08 & Multiple Deliveries Optimization & Log in as Employee $\rightarrow$ View assigned deliveries $\rightarrow$ System optimizes stops for efficiency & Deliveries arranged in the most time-efficient order & Stops optimized correctly & Pass \\
+\hline
+\end{longtable}
+\section{Summary}
+Software testing for FastTrack involved Unit Testing, Black Box Testing, White Box Testing and
+Integration Testing to ensure system reliability. Unit Testing focused on individual components,
+verifying functions like user authentication, package assignment and route optimization in isolation.
+Black Box Testing evaluated the system’s functionality without examining internal code, ensuring
+proper user interactions, correct package assignments and accurate navigation features. White Box
+Testing examined the internal logic and code structure, validating algorithm efficiency, database
+queries and API response accuracy. Integration Testing ensured seamless data flow between
+modules, verifying that Firebase authentication, Firestore data storage and Google Maps API
+integration worked together without issues. The mobile app and web platform were tested to confirm
+synchronized updates for delivery personnel and businesses. All tests confirmed the system’s stability,
+usability and accuracy in handling deliveries. The results demonstrated that FastTrack effectively
+meets its functional and technical requirements.

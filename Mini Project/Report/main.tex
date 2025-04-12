@@ -1,0 +1,252 @@
+
+% \documentclass[12pt,a4paper]{article}
+% \usepackage{ragged2e}
+% \usepackage{graphicx} % Required for insert
+% \usepackage{geometry}
+% \geometry{
+%     a4paper,
+%     left=20mm,
+%     right=20mm,
+%     top=20mm,
+%     bottom=20mm
+% }
+
+% \begin{document}
+
+% \begin{titlepage}
+    
+% \input{coverpage}
+
+% \end{titlepage}
+
+% \input{deptmissionandvision}
+% \input{certificate}
+% \include{acknowledgements.tex}
+% \newpage
+
+
+
+% \end{document}
+
+
+\documentclass[12 pt,a4paper]{report}
+%---------------------------------------Including the various packages----------------------
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsmath,bm}
+\usepackage[toc,page]{appendix}
+\usepackage{setspace}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{varwidth}
+\usepackage{algorithm2e}
+\usepackage[skip=10pt]{subcaption}
+\usepackage{sidecap}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage[classfont=bold,
+            langfont=roman,
+            funcfont=italic]{complexity}
+\usepackage{cite}
+\usepackage[none]{hyphenat}
+\usepackage{breqn}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{regexpatch}
+\usepackage[section]{placeins}
+\usepackage{float}
+\usepackage{lipsum}
+\usepackage{regexpatch}
+\usepackage{makeidx}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage[left=2cm,top=1in,right=2cm,bottom=1in,bindingoffset=0.4cm]{geometry}
+
+\usepackage{fancyhdr} 
+\usepackage{ragged2e}
+\usepackage{algorithm2e}
+\usepackage{rotating}
+\usepackage{titlesec}
+\usepackage{afterpage}
+\usepackage{fancyvrb}
+\usepackage[T1]{fontenc}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{pgfplots}
+\usepackage{longtable}
+%\usepackage{hyperref}
+%\urlstyle{same}
+\captionsetup[figure]{width=0.9\linewidth}
+%---------------------------------Redefining existing commands-------------------------------
+\makeatletter
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand\bibname{References}
+\renewcommand{\@algocf@capt@plain}{above}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\xpatchcmd{\chaptermark}{\MakeUppercase}{}{}{}
+\xpatchcmd{\sectionmark}{\MakeUppercase}{}{}{}
+\xpatchcmd*{\tableofcontents}{\MakeUppercase}{}{}{}
+% \renewcommand{\listfigurename}{List of Figures and Algorithms}
+%------------------------------Setting different Counters and lengths--------------------------------
+\makeatother
+\setcounter{secnumdepth}{4}
+\setcounter{chapter}{0}
+\setcounter{tocdepth}{4}
+\setlength{\headheight}{14.5pt}
+\setlength\extrarowheight{5pt}
+\setlength{\textfloatsep}{5pt}
+%-------------------------------Defining new commands -----------------------------------------------
+\makeatletter
+\newfloat{Algorithm}{luc}{Algorithm}[chapter]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{fact}{Fact}[section]
+\newtheorem{facts}{Facts}[section]
+\newtheorem*{claim}{Claim}
+\newtheorem*{result}{Result}
+\newtheorem*{remarks}{Remarks}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ie}{\textit{i}.\textit{e}.}
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-2}
+    \newpage
+    \cleardoublepage
+    }
+\newcolumntype{L}{>{\centering\arraybackslash}m{14cm}}
+\newcolumntype{M}{>{\centering\arraybackslash}m{15cm}}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\makeatother
+%-------------------------------Fancy Styles, Headers,Footers,Page Numbers etc-----------------------------------
+\fancyhf{}
+\fancyhead[R]
+{
+   \itshape
+   \ifnum\value{chapter}>0 \chaptername\ \thechapter. \fi
+   \leftmark
+}
+\fancyfoot[C]{\thepage}
+\fancyfoot[L]{\emph{Dept of CSE-RIT-Kottayam}}
+\fancypagestyle{plain}
+{
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+}
+%-----------------------------------Changing the font size of sections, subsections etc------------------------
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+%\titleformat*{\paragraph}{\large\bfseries}
+%\titleformat*{\subparagraph}{\large\bfseries}
+%-----------------------------Other settings ---------------------------------------------------------
+\makeatletter
+\def\verbatim@font{\normalfont}% select the font
+%\let\do\do@noligs
+%\verbatim@nolig@list}
+%\makeatother
+\def\Verbatim@nolig@list{\do\`\do\<\do\>\do\,\do\'\do\-\do\{\do\}}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-40pt}{20pt}
+\lineskiplimit=-1pt\relax
+\hyphenation{thatshouldnot}
+\makeindex
+\pagestyle{fancy} 
+\sloppy
+%------------------------------------------------------------------------------------------------------
+\begin{document}
+%--------------------------Here starts the document--------------------------------------------------
+\RestyleAlgo{boxruled}
+\LinesNumbered
+\thispagestyle{empty}
+\pagenumbering{gobble}
+\onehalfspacing
+%--------------------------Here include the cover page----------------------------------
+\include{coverpage.tex}
+\newpage
+%--------------------------Here include the dept mission and vision----------------------------------
+\include{deptmissionandvision.tex}
+\newpage
+
+%--------------------------Here include the certificate----------------------------------
+
+\include{certificate.tex}
+\newpage
+%--------------------------Here include the acknowledgements---------------------------
+\pagenumbering{roman}
+\include{acknowledgements.tex}
+\clearpage
+%--------------------------Here include the declaration ------------------------------
+\include{declaration.tex} 
+\newpage
+%--------------------------Here include the abstract, table of contents, list of figures etc--------------------
+\include{abstract.tex}
+
+\newpage
+{\pagestyle{plain}
+\tableofcontents
+\cleardoublepage}
+
+% Use the following block if you have figures in the report
+\newpage
+{\pagestyle{plain}
+\listoffigures
+\addcontentsline{toc}{chapter}{\numberline{}List of Figures}%
+\cleardoublepage}
+
+\newpage
+% Use the following block if you have tables in the report
+%\listoftables
+%\addcontentsline{toc}{chapter}%{\numberline{}List of Tables}%
+%\cleardoublepage
+
+% Use the following block if you have figures in the report
+\newpage
+{\pagestyle{plain}
+\listofalgorithms
+\addcontentsline{toc}{chapter}{\numberline{}List of Algorithms}%
+\cleardoublepage}
+
+%Use the following block if you have symbols and abbreviations in the report
+\include{listofsymbolsandabbreviations.tex}
+
+
+%-------------------------Here include the different chapters---------------------------------------------------
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\include{chapter1.tex}
+\include{chapter2.tex}
+\include{chapter3.tex}
+\include{chapter4.tex}
+\include{chapter5.tex}
+\include{chapter6.tex}
+\include{chapter7.tex}
+
+
+%------------------------Here include the appendix if required-------------------------------------------------
+\appendix
+\addcontentsline{toc}{part}{Software Requirements Specification}
+% \hspace{10pt}
+% \vspace{-200pt}
+\include{appendix.tex}
+
+%-----------------------Here include the references------------------------------------------------------
+\nocite{*} 
+\bibliographystyle{unsrt}	
+\bibliography{references.bib}	
+%\cite{cormen2022}
+%\cite{swayam2023}
+%\cite{makansi2024}
+%\cite{workload2024}
+%\cite{flutter2024], googlemapsapi, firestore2024, flask2024}
+\include{index.tex}
+\end{document}
