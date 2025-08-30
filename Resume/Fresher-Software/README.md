@@ -6,7 +6,7 @@ This repository provides a fully customizable LaTeX resume template along with a
 
 - **cv.tex** — The LaTeX source file with placeholder fields and section prompts.
 - **Resume_Software.pdf** — A compiled example PDF showcasing the template’s layout and styling.
-- **LICENSE** — The MIT License, with copyright attributed to Jitin Nair and modifications by you.
+- **LICENSE** — The MIT License, with copyright attributed to Jitin Nair and modifications by Jessin Sunny.
 - **README.md** — This usage guide.
 
 ## Getting Started
