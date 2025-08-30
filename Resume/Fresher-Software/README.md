@@ -21,19 +21,19 @@ This repository provides a fully customizable LaTeX resume template along with a
    Ensure you have a TeX distribution installed (e.g., TeX Live, MiKTeX). A minimal installation with `latex`, `pdflatex`, and required packages is sufficient.
 
 3. **Customize the Template**
-   - Open **resume-template.tex** in your text editor.
+   - Open **cv.tex** in your text editor.
    - Replace all bracketed placeholders (`[Your Full Name]`, `[Company Name]`, `[Duration]`, etc.) with your personal information.
    - Follow the inline comments and section prompts to add your profile summary, education, skills, certifications, projects, and experience.
 
 4. **Compile to PDF**
    From the repository root, run:
    ```bash
-   pdflatex resume-template.tex
-   bibtex resume-template      # only if you have bibliography entries
-   pdflatex resume-template.tex
-   pdflatex resume-template.tex
+   pdflatex cv.tex
+   bibtex citations      # only if you have bibliography entries
+   pdflatex cv.tex
+   pdflatex cv.tex
    ```
-   Output: **resume-template.pdf**
+   Output: **Resume_Software.pdf**
 
 5. **Review & Iterate**
    - Open the generated PDF to verify formatting and content.
